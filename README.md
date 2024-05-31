@@ -23,10 +23,12 @@ By working on this CRUD object I improved my understanding of the creation and h
 ## How to Install
 
 
-Android Studio installation is preferred, however you should be able to run the application by downloading it to an android device or emulator.
+Android Studio installation is preferred, however you should be able to run the application by downloading it to an android device or emulator using this repository.
 
 
 ***targetted sdk: 33***
+
+
 *minimum sdk for android API: 24*
 
 
