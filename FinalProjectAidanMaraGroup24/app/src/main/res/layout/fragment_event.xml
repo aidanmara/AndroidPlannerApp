@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/description_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="@string/description"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/endDate_label"
+        app:layout_constraintTop_toBottomOf="@id/endDate_label" />
+
+    <Spinner
+        android:id="@+id/project_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintLeft_toLeftOf="@id/name_editText"
+        app:layout_constraintBaseline_toBaselineOf="@id/colorSelector_label"
+        />
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Select Date"
+        app:layout_constraintBaseline_toBaselineOf="@id/endDate_label"
+        app:layout_constraintLeft_toLeftOf="@id/name_editText" />
+
+    <EditText
+        android:id="@+id/description_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="@id/name_editText"
+        app:layout_constraintBaseline_toBaselineOf="@id/description_label" />
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintLeft_toRightOf="@id/pcName_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/pcName_label"
+        android:layout_marginLeft="30dp"
+        />
+
+    <Button
+        android:id="@+id/create_event_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Create Event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/eventFrag_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+
+    <TextView
+        android:id="@+id/requirementLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="* required"
+        app:layout_constraintLeft_toLeftOf="@id/pcName_label"
+        app:layout_constraintTop_toBottomOf="@id/create_event_button" />
+
+    <TextView
+        android:id="@+id/colorSelector_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Project/Class*"
+        app:layout_constraintLeft_toLeftOf="@id/pcName_label"
+        app:layout_constraintTop_toBottomOf="@id/pcName_label" />
+
+    <TextView
+        android:id="@+id/endDate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+
+        android:fontFamily="@font/roboto_mono"
+        android:text="@string/end_date"
+        app:layout_constraintLeft_toLeftOf="@id/pcName_label"
+        app:layout_constraintTop_toBottomOf="@id/colorSelector_label" />
+
+    <TextView
+        android:id="@+id/pcName_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="15sp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="@string/event_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventFrag_label" />
+
+    <TextView
+        android:id="@+id/eventFrag_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="@string/create_event"
+        android:textColor="@color/textblack"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/projectColorRed"
+        android:backgroundTintMode="src_over"
+        android:text="CLEAR EVENTS"
+        android:textSize="10sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

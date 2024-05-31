@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dash"
+        android:icon="@drawable/bx_list_ol"
+        android:title="@string/dashboard" />
+
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/bx_calendar_event"
+        android:title="Create Event" />
+
+    <item
+        android:id="@+id/navigation_project"
+        android:icon="@drawable/bx_select_multiple"
+        android:title="Create Project" />
+
+</menu>

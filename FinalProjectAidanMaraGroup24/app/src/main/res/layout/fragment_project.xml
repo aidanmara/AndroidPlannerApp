@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/color_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintLeft_toLeftOf="@id/name_editText"
+        app:layout_constraintBaseline_toBaselineOf="@id/colorSelector_label"
+        />
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+
+        app:layout_constraintLeft_toRightOf="@id/pcName_label"
+        app:layout_constraintBaseline_toBaselineOf="@id/pcName_label"
+        android:layout_marginLeft="30dp"
+        />
+
+    <Button
+        android:id="@+id/create_pc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Create Project/Class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/eventFrag_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colorSelector_label" />
+
+    <TextView
+        android:id="@+id/colorSelector_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Color*"
+        app:layout_constraintLeft_toLeftOf="@id/eventFrag_label"
+        app:layout_constraintTop_toBottomOf="@id/pcName_label" />
+
+    <TextView
+        android:id="@+id/pcName_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Name*:"
+        app:layout_constraintLeft_toLeftOf="@id/eventFrag_label"
+        app:layout_constraintTop_toBottomOf="@id/eventFrag_label" />
+
+    <TextView
+        android:id="@+id/eventFrag_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_mono"
+        android:text="CREATE PROJECT OR CLASS"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/requirementLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="* required"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/eventFrag_label"
+        app:layout_constraintTop_toBottomOf="@id/create_pc_button" />
+
+    <TextView
+        android:id="@+id/updateLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="important: upon pressing update the project will take the fields entered abov. leave name empty if you do not wish to change it."
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/eventFrag_label"
+        app:layout_constraintTop_toBottomOf="@id/create_pc_button" />
+
+    <TextView
+        android:id="@+id/eventDelete_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_mono"
+        android:text="DELETE OR UPDATE"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/requirementLabel" />
+
+    <Spinner
+        android:id="@+id/pro_spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventDelete_label"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/delete_pc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/projectColorRed"
+        android:layout_marginRight="100dp"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Delete"
+        android:backgroundTintMode="src_over"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pro_spinner" />
+
+    <Button
+        android:id="@+id/update_pc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:backgroundTint="@color/projectColorGreen"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:fontFamily="@font/roboto_mono"
+        android:text="Update"
+        android:backgroundTintMode="src_over"
+        app:layout_constraintLeft_toLeftOf="@id/eventDelete_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pro_spinner" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

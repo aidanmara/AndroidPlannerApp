@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_dash">
+
+    <fragment
+        android:id="@+id/navigation_dash"
+        android:name="com.example.finalprojectaidanmaragroup24.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_event"
+        android:name="com.example.finalprojectaidanmaragroup24.EventFragment"
+        tools:layout="@layout/fragment_event">
+        <action
+            android:id="@+id/action_nav_event_to_nav_dash"
+            app:destination="@id/navigation_dash" />
+        <action
+            android:id="@+id/action_navigation_event_to_navigation_project"
+            app:destination="@id/navigation_project" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_project"
+        android:name="com.example.finalprojectaidanmaragroup24.ProjectFragment"
+ />
+</navigation>

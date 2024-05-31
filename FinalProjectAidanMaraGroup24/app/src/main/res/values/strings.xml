@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">PlannerProject</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="end_date">End Date*:</string>
+    <string name="event_name">Event Name*:</string>
+    <string name="create_event">CREATE EVENT</string>
+    <string name="description">Description:</string>
+    <string name="end_time">End Time:</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="new_label">New</string>
+    <string-array name="ProjectSpinnerColors">
+        <item>None</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Yellow</item>
+        <item>Pink</item>
+        <item>Brown</item>
+        <item>Red</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
